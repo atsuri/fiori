@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  jsonserver:
+    image: clue/json-server
+    container_name: "flowers_api"
+    hostname: jsonserver
+    working_dir: /data
+    environment:
+      TZ: "Asia/Tokyo"
+    ports:
+      - 3000:80
+    volumes:
+      - ./data:/data
+
+  app:
+    image: nginx:latest
+    container_name: "flowers_app"
+    working_dir: /usr/share/nginx/html
+    environment:
+      TZ: "Asia/Tokyo"
+    ports:
+      - 8080:80
+    volumes:
+      - ./app:/usr/share/nginx/html
+    depends_on:
+      - jsonserver

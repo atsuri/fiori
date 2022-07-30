@@ -1,0 +1,177 @@
+{
+  "recommendation": [
+    {
+      "id": 1
+    },
+    {
+      "id": 9
+    },
+    {
+      "id": 10
+    }
+  ],
+  "flowers": [
+    {
+      "id": 1,
+      "name": "レインボーローズ",
+      "image": "images/bouquet_rainbowrose.jpg",
+      "stock": 10,
+      "category_name": "bouquet",
+      "price": 1000
+    },
+    {
+      "id": 2,
+      "name": "バラ",
+      "image": "images/red_rose.jpg",
+      "stock": 10,
+      "category_name": "red",
+      "price": 300
+    },
+    {
+      "id": 3,
+      "name": "ガーベラ",
+      "image": "images/orange_gerbera.jpg",
+      "stock": 10,
+      "category_name": "orange",
+      "price": 200
+    },
+    {
+      "id": 4,
+      "name": "チューリップ",
+      "image": "images/pink_tulip.jpg",
+      "stock": 10,
+      "category_name": "pink",
+      "price": 200
+    },
+    {
+      "id": 5,
+      "name": "ルリタマアザミ",
+      "image": "images/purple_SmallGlobeThistle.webp",
+      "stock": 10,
+      "category_name": "purple",
+      "price": 100
+    },
+    {
+      "id": 6,
+      "name": "スイートピー",
+      "image": "images/yellow_sweetpea.jpg",
+      "stock": 10,
+      "category_name": "other",
+      "price": 300
+    },
+    {
+      "id": 7,
+      "name": "インディゴ花束",
+      "image": "images/bouquet_blue.jpg",
+      "stock": 10,
+      "category_name": "bouquet",
+      "price": 800
+    },
+    {
+      "id": 8,
+      "name": "アネモネ",
+      "image": "images/red_anemone.jpg",
+      "stock": 10,
+      "category_name": "red",
+      "price": 300
+    },
+    {
+      "id": 9,
+      "name": "コスモス",
+      "image": "images/orange_cosmos.jpeg",
+      "stock": 10,
+      "category_name": "orange",
+      "price": 400
+    },
+    {
+      "id": 10,
+      "name": "カーネーション",
+      "image": "images/pink_carnation.jpg",
+      "stock": 10,
+      "category_name": "pink",
+      "price": 300
+    }
+  ],
+  "carts": [
+    {
+      "id": 1,
+      "name": "レインボーローズ",
+      "image": "images/bouquet_rainbowrose.jpg",
+      "buy": 0,
+      "category_name": "bouquet",
+      "price": 1000
+    },
+    {
+      "id": 2,
+      "name": "バラ",
+      "image": "images/red_rose.jpg",
+      "buy": 0,
+      "category_name": "red",
+      "price": 300
+    },
+    {
+      "id": 3,
+      "name": "ガーベラ",
+      "image": "images/orange_gerbera.jpg",
+      "buy": 0,
+      "category_name": "orange",
+      "price": 200
+    },
+    {
+      "id": 4,
+      "name": "チューリップ",
+      "image": "images/pink_tulip.jpg",
+      "buy": 0,
+      "category_name": "pink",
+      "price": 200
+    },
+    {
+      "id": 5,
+      "name": "ルリタマアザミ",
+      "image": "images/purple_SmallGlobeThistle.webp",
+      "buy": 0,
+      "category_name": "purple",
+      "price": 100
+    },
+    {
+      "id": 6,
+      "name": "スイートピー",
+      "image": "images/yellow_sweetpea.jpg",
+      "buy": 0,
+      "category_name": "other",
+      "price": 300
+    },
+    {
+      "id": 7,
+      "name": "インディゴ花束",
+      "image": "images/bouquet_blue.jpg",
+      "buy": 0,
+      "category_name": "bouquet",
+      "price": 800
+    },
+    {
+      "id": 8,
+      "name": "アネモネ",
+      "image": "images/red_anemone.jpg",
+      "buy": 0,
+      "category_name": "red",
+      "price": 300
+    },
+    {
+      "id": 9,
+      "name": "コスモス",
+      "image": "images/orange_cosmos.jpeg",
+      "buy": 0,
+      "category_name": "orange",
+      "price": 400
+    },
+    {
+      "id": 10,
+      "name": "カーネーション",
+      "image": "images/pink_carnation.jpg",
+      "buy": 0,
+      "category_name": "pink",
+      "price": 300
+    }
+  ]
+}

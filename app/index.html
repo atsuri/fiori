@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Fiori</title>
+    <link rel="stylesheet" href="Flowers.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="flowers.js"></script>
+  </head>
+  <body>
+    <div id="flowersApp">
+      <div class="container">
+        <div class="searchArea">
+          <img class="logo" src="logo.webp">
+          <h1>Fiori</h1>
+          <input class="searchBox" type="text" v-model="input" v-on:keydown.enter="searchFlowersByName">
+          <i class="material-icons searchIcon" v-on:click="searchFlowersByName" >search</i>
+          <i class="material-icons cart" v-on:click="cartopen" >shopping_cart_checkout</i>
+        </div>
+
+        <div v-if="checkcart == false">
+          <h4 class="message">Fioriへようこそ！　こちらでは、切花や花束を販売しています♪</h4>
+        </div>
+
+        <h2>Category</h2>
+        <div class="category">
+          <button v-on:click="searchFlowersByCategory" class="kinds" value="bouquet">花束</button>　|
+          <button v-on:click="searchFlowersByCategory" class="kinds" value="red">赤色</button>　|
+          <button v-on:click="searchFlowersByCategory" class="kinds" value="orange">オレンジ色</button>　|
+          <button v-on:click="searchFlowersByCategory" class="kinds" value="pink">ピンク色</button>　|
+          <button v-on:click="searchFlowersByCategory" class="kinds" value="purple">紫色</button>　|
+          <button v-on:click="searchFlowersByCategory" class="kinds" value="other">その他の色</button>
+        </div>
+
+        <div v-if="checkcart == true">
+          <div class="message">
+            <h2>Cart</h2>
+            <h2 class="total">total: {{ total }}yen</h2>
+          </div>
+          <div class="dispArea">
+            <div v-for="flower in cart" v-bind:key="flower.id">
+              <p class="flowerTitle">{{ flower.name }}</p>
+              <div class="flowerInfo">
+                <img class="flowerImage" v-bind:src="flower.image">
+                <div>
+                  <p class="flowerPrice">{{ flower.price }}yen</p>
+                  <p>×</p>
+                  <p class="flowerstock">orders: {{ flower.buy }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+          <button v-on:click="clearcart" class="flowerstock">注文確定</button>
+        </div>
+
+        <div v-if="checkcart == false">
+          <div class="cannotbuy" v-if="soldout == true">
+            <p>申し訳ありません。売り切れのため、ご購入いただけません。</p>
+          </div>
+          <div class="dispArea" v-if="showRecommendation == false">
+            <div v-for="flower in flowers" v-bind:key="flower.id">
+
+              <p class="flowerTitle">{{ flower.name }}</p>
+              <div class="flowerInfo">
+                <img class="flowerImage" v-bind:src="flower.image">
+                <div>
+                  <p class="flowerPrice">{{ flower.price }}yen</p>
+                  <p class="flowerstock">stock: {{ flower.stock }}</p>
+                  <input type="button" value="カートに入れる" v-on:click="order" v-bind:id="flower.id" class="flowerstock">
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div v-if="showRecommendation == true">
+            <h2>Recommendation</h2>
+            <div class="dispArea">
+              <div v-for="reco in recommendation" v-bind:key=" reco.id ">
+                <div class="flowerInfo">
+                  <img class="flowerImage" v-bind:src="reco.image">
+                  <div>
+                    <p class="flowerTitle">{{ reco.name }}</p>
+                    <p class="flowerTitle">{{ reco.price }}yen</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <br>
+    <br>
+  </body>
+</html>
